@@ -1,0 +1,34 @@
+---
+title: "eds221-day10-comp"
+format: html
+editor: visual
+---
+
+## 
+
+```{r}
+library(tidyverse)
+devlibrary(palmerpenguins)
+ggplot(data=penguins, aes(x=flipper_length_mm,y=body_mass_g))+
+  geodevtools::install_github("kpaya/NewPackage")m_point()+ labs(title="Penguins")+
+  theme(title=element_text(size=16, color="purple"),
+        plot.background = element_rect(fill="black"),
+        panel.background= element_rect(fill="gray20"),
+        axis.text = element_text(color="yellow"),
+        panel.grid.major = element_line(color="blue"),
+        panel.grid.minor=element_line(color="cyan"))
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+library(NewPackage)
+ggplot(data=penguins, aes(x=flipper_length_mm,y=body_mass_g)) + theme_eighties()
+```
